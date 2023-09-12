@@ -1,0 +1,522 @@
+/* CSS BASICO */
+
+:root{
+
+    --fondos:#2874A6;
+    --titulos: #2E86C1;
+    --texto: #2874A6;
+}
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+}
+
+/* ESTILOS AL NAV-BAR */
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.nav-bar{
+    background-color: var(--fondos);
+    height: 4rem;
+    text-transform: uppercase;
+}
+
+.nav-bar__header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid white; */
+}
+
+.nav-bar__logo, .nav-bar__burga , .nav-bar__cerrar, .nav-bar__link{
+    color: white;
+    font-size: 1.7rem;
+}
+
+.nav-bar__container{
+    position: absolute;
+    background-color: var(--fondos);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease;
+    
+}
+
+#nav-bar__header:target .nav-bar__container{
+    height: 15rem;
+}
+
+#nav-bar__header:target .open{
+    display: none;
+}
+
+#nav-bar__header:target .close{
+    display: flex;
+}
+
+.close{
+    display: none;
+}
+
+.nav-bar__link{
+    color:white;
+    text-decoration: white;
+}
+
+
+/* CSS PARA SECCION DE BIENVENIDA */
+
+.welcome{
+    background-image: url(/images/img.jpg);
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.welcome h1{
+    color: black;
+    margin-top: 2rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;   
+    
+}
+
+.welcome h2{
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CSS PARA LA FRASE MOTIVADORA */
+
+.frase{
+    background-color: var(--fondos);
+    color: white;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.frase h1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+/* CSS PARA LA SECCCION DE SERVICIOS  */
+
+.titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.servicios{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 2rem;
+}
+
+.servicios-container{
+    text-align: center;
+    height: 200px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px rgba(40,116,166,0.3), 0px 2px 7px rgba(40,116,166,0.1);
+    border: .1px solid #white;
+    padding: 1rem;    
+    text-align: center;
+    padding-top:3rem;
+}
+
+.servicios-container i{
+    padding-right: .5rem;
+}
+
+.servicios-container h3{
+    padding-bottom: 0.5rem;
+}
+
+/* CSS PARA LA SECCCION DE PLANES  */
+
+.p-planes{
+    background-color: var(--fondos);
+    color:black;
+}
+
+.planes{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 2rem;
+}
+
+.p-planes h1{
+    color:white;
+}
+
+.planes-container{
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(40,116,166,0.3), 0px 2px 7px rgba(40,116,166,0.1);
+    border: .1px solid white;
+    padding: 1rem;  
+    padding-bottom: 5rem;  
+    text-align: center;
+    justify-content:center;
+    background-color:white;
+    height:auto;
+    position:relative;
+}
+
+.planes-container li{
+    width: 90%;
+    padding: .5rem;
+    font-size: 1rem;
+    margin: 1rem;
+    text-align: start;
+}
+
+.planes-container h3{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.planes-container a{
+    width: 100px;
+    color: white;
+    padding: 0.3rem;
+    background-color: #2874A6;
+    border-radius: 10%;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+}
+
+.planes-container i{
+    padding-right: 0.3rem;
+}
+
+.planes-texto{
+   display: flex;
+   justify-content: center;
+}
+
+.positivo{
+    color:green;
+}
+
+.negativo{
+    color:grey
+}
+
+.planes-medida{
+    padding-bottom: 2rem;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* CSS PARA SECCION CLIENTES */
+
+.clientes{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.clientes-container{
+    height: 200px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+}
+
+.clientes-container a{
+    font-size:2rem;
+    color:black;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+}
+
+.helix{
+    background-color: #2874A6;
+    background-image: url(./images/img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cafeteria{
+    background-color: black;
+    background-image:url(./images/cafeteria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bes{
+    background-color: green;
+    /* background-image:url(./images/Logo_BES.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* CSS PARA EL FOOTER */
+
+footer{
+    width: 100%;
+    background-color: var(--fondos);
+    color:white;
+    margin:auto;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer h3{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.contactos{
+text-align: center;
+font-size: 1rem;
+}
+
+.contactos ul li{
+    padding-bottom: 0.5rem;
+}
+
+.contactos ul li i{
+    padding-right: .5rem ;
+    font-size: 1rem;
+}
+
+.nostoros{
+    text-align: center;
+}
+
+.nosotros p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.redes{
+    text-align: center;
+}
+
+.redes ul li{
+    display: inline-block;
+}
+
+.redes a{
+    margin-right: 1rem;
+    color: white;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.redes i{
+    font-size: 2rem;
+}
+
+.item{
+    margin-bottom: 2rem;
+}
+
+/* .fa-arrow-up {
+    border: solid 1px white;
+    padding: 1rem;
+    margin-left: 1rem;
+} */
+
+.derechos{
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    height: 2rem;
+}
+
+.derechos a{
+    color:#2874A6;
+}
+
+
+
+/* CSS PARA LAS MEDIAS QUERYS */
+@media (min-width:760px){
+    .nav-bar{
+        height: 5rem;
+    }
+
+    .nav-bar__item{
+        /* padding-right: .5rem; */
+    }
+
+    .nav-bar__burga{
+        display: none;
+    }
+
+    .nav-bar__container{
+        height: auto;
+        flex-direction: row;
+        position: static;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .nav-bar__header{
+        border-bottom: none;
+    }
+
+    .frase h1{
+        font-size: 2rem;
+    }
+
+    .welcome h1{
+        font-size: 5rem;  
+    }
+    
+    .welcome h2{
+        font-size: 3rem;    
+    }
+
+    footer{
+        width: 100%;
+        background-color: var(--fondos);
+        color:white;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px;
+        padding: 45px 0px;
+    }
+
+
+    .contactos ul li i{
+        font-size: 1.1rem;
+
+    }
+
+    .nosotros p{
+        font-size: 1.4rem;
+    }
+
+    .derechos{
+        font-size: 1.5rem;
+
+    }
+
+    .contactos{
+        font-size: 1.3rem;
+    }
+
+    .fa-arrow-up {
+        margin-left: 4rem;
+    }
+
+    /* .fa-arrow-up:hover{
+        background-color: white;
+        color:#2874A6
+    } */
+
+    .planes-container li{
+        font-size: 1.2rem;
+    }
+
+    .planes-container h3{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width:1000px){
+
+    .servicios-container p{
+        font-size: 1.3rem;
+    }
+
+    .planes-container a{
+        font-size: 1.3rem;
+    }
+
+    .frase h1{
+        font-size: 3rem;
+    }
+
+    .nav-bar__container{
+        width: 60%;
+    }
+
+   
+
+}
+
+@media (min-width:1400px){
+    .frase h1{
+        font-size: 3.5rem;
+    }
+
+    .nav-bar__container{
+        font-size: 1.5rem;
+    }
+
+    .nav-bar{
+        height: 6rem;
+    }
+}
