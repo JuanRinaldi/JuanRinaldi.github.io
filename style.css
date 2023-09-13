@@ -385,9 +385,9 @@ font-size: 1rem;
 
 .derechos{
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: 1.3rem;
-    height: 2rem;
+    height: 4rem;
 }
 
 .derechos a{
@@ -517,6 +517,6 @@ font-size: 1rem;
     }
 
     .nav-bar{
-        height: 6rem;
+        height: 5rem;
     }
 }
